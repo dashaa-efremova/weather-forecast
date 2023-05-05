@@ -11,7 +11,7 @@ import { createRoot } from 'react-dom/client'
 const store = createStore(weather);
 
 createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Provider store={store}>
             <App />
         </Provider>
